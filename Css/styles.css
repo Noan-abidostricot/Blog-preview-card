@@ -1,68 +1,170 @@
-@font-face {
-    font-family: 'Figtree';
-    src: url('/assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900; /* poids variable */
-    font-style: normal;
-  }
-  
-@font-face {
-    font-family: 'Figtree';
-    src: url('/assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900; /* poids variable */
-    font-style: italic;
+:root{
+  --yellow : hsl(47, 88%, 63%);
+  --white : hsl(0, 0%, 100%);
+  --gray500 : hsl(0, 0%, 42%);
+  --gray950 : hsl(0, 0%, 7%);
 }
-  
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* poids variable */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* poids variable */
+  font-style: italic;
+}
+
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+
+body {
+  display: flex;
+  background-color: var(--yellow);
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Figtree';
+  height : 100vh;
+  justify-content: center;
+  align-items: center;
   
-  /* 2. Remove default margin */
-  * {
-    margin: 0;
-  }
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+p{
+  font-size : 16px;
+}
+
+.card{
+  background-color: var(--white);
+  width: 383px;
+  border : black 1px solid;
+  border-radius : 20px;
+  box-shadow: 9px 9px  var(--gray950);
+}
+
+
+
+.img-container{
+  padding : 23px;
+  border-radius: 10px;
   
-  /* 3. Enable keyword animations */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      interpolate-size: allow-keywords;
-    }
-  }
+}
+
+img{
+  border-radius: 10px;
+}
+
+
+.tag{
+  width: 82px;
+  margin-left : 23px;
+  background-color: var(--yellow);
+  text-align: center;
+  font-weight : 700;
+  margin-top : 1.5px;
+  padding : 3px;
+  padding-top: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px;
   
-  body {
-    /* 4. Add accessible line-height */
-    line-height: 1.5;
-    /* 5. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  /* 6. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* 7. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  /* 8. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  /* 9. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  /*
-    10. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
+
+}
+
+.tag p{
+  font-size : 0.88rem;
+}
+
+
+
+time{
+  color : var(--gray950);
+  margin-left : 23px;
+  font-size : 0.85rem;
+  letter-spacing: 0.015rem;
+}
+
+.main-title{
+  margin-left : 23px;
+  margin-top : 11px;
+  letter-spacing: 0.009rem;
+}
+
+.main-title:hover{
+  cursor: pointer;
+  color : var(--yellow)
+}
+
+.description {
+  font-size : 1.01rem;
+  width : 389px;
+  margin-left : 23px;
+  margin-top : 13px;
+  line-height: 1.5; /* améliore la lisibilité */
+}
+
+
+.author{
+  display: flex;
+  padding-bottom: 22px;
+}
+
+.author img{
+  width : 32px;
+  height : auto;
+  margin-left : 23px;
+  margin-top : 23px;
+}
+
+.author-name{
+  margin-top : 28px;
+  font-size : 14px;
+  font-weight: 800;
+  margin-left : 12px;
+
+}
