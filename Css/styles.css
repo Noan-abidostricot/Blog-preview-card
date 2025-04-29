@@ -5,19 +5,7 @@
   --gray950 : hsl(0, 0%, 7%);
 }
 
-@font-face {
-  font-family: 'Figtree';
-  src: url('/assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900; /* poids variable */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Figtree';
-  src: url('/assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900; /* poids variable */
-  font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 /* 1. Use a more-intuitive box-sizing model */
