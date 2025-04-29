@@ -134,7 +134,8 @@ time{
   width : 389px;
   margin-left : 23px;
   margin-top : 13px;
-  line-height: 1.5; /* améliore la lisibilité */
+  line-height: 1.5; 
+  color : var(--gray500)
 }
 
 
